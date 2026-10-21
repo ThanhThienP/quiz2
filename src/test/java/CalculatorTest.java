@@ -34,4 +34,17 @@ public class CalculatorTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void testIsEven() {
+        int number = 19;
+        boolean result = calculator.isEven(number);
+        assertEquals(result, false);
+
+        assertTrue(calculator.isEven(20));
+    }
+
+    @Test
+    public void testIsOdd() {
+        assertFalse(calculator.isEven(19));
+    }
 }

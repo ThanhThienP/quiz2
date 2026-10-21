@@ -17,4 +17,11 @@ public class Calculator {
             return 0;
         return a / b;
     }
+
+    public boolean isEven(int a) {
+        if (a % 2 == 0) {
+            return true;
+        }
+        return false;
+    }
 }
