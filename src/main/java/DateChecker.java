@@ -18,6 +18,6 @@ public class DateChecker {
             Month.OCTOBER, Month.DECEMBER };
 
     public boolean has31Days(Month month) {
-        return false;
+        return true;
     }
 }
