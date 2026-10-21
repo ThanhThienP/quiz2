@@ -50,9 +50,17 @@ public class CalculatorTest {
 
     @Test
     public void testIncrementArrays() {
-        int[] expected = new int[]{7, 9, 4};
-        int[] actual = calculator.incrementArrays(new int[]{6, 8, 3});
+        int[] expected = new int[] { 7, 9, 4 };
+        int[] actual = calculator.incrementArrays(new int[] { 6, 8, 3 });
 
-        assertArrayEquals(expected, actual); 
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void testDivideByZero() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> calculator.divide(3, 0));
+        String expectedMessage = "Ints cannot be divded by zero";
+        String actualMessage = exception.getMessage();
+        assertEquals(expectedMessage, actualMessage);
     }
 }
