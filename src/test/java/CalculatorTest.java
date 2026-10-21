@@ -47,4 +47,12 @@ public class CalculatorTest {
     public void testIsOdd() {
         assertFalse(calculator.isEven(19));
     }
+
+    @Test
+    public void testIncrementArrays() {
+        int[] expected = new int[]{7, 9, 4};
+        int[] actual = calculator.incrementArrays(new int[]{6, 8, 3});
+
+        assertArrayEquals(expected, actual); 
+    }
 }
