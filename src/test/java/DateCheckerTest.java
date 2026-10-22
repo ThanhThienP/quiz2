@@ -2,6 +2,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.Test;
+
 public class DateCheckerTest {
     DateChecker dateChecker = new DateChecker();
 
@@ -19,5 +21,13 @@ public class DateCheckerTest {
     })
     public void testDoesNotHas31Days(DateChecker.Month month) {
         assertFalse(dateChecker.has31Days(month));
+    }
+
+    @Test
+    public void testNullMonthThrowsException() {
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> dateChecker.has31Days(null),
+                "Passing null should throw an IllegalArgumentException");
     }
 }
