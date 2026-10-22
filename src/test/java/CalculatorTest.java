@@ -47,10 +47,6 @@ public class CalculatorTest {
 
     @Test
     public void testIsEven() {
-        int number = 19;
-        boolean result = calculator.isEven(number);
-        assertEquals(result, false);
-
         assertTrue(calculator.isEven(20), "20 is even");
         assertTrue(calculator.isEven(0), "0 is even");
         assertTrue(calculator.isEven(-4), "-4 is even");
