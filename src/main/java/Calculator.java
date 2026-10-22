@@ -1,28 +1,26 @@
 public class Calculator {
 
-    public int add(int a, int b) {
-        return a + b;
+    public int sum(int x, int y) {
+        return x + y;
     }
 
-    public int subtract(int a, int b) {
-        return a - b;
+    public int subtract(int x, int y) {
+        return x - y;
     }
 
-    public int multiply(int a, int b) {
-        return a * b;
+    public int multiply(int x, int y) {
+        return x * y;
     }
 
-    public int divide(int a, int b) {
-        if (b == 0)
-            throw new IllegalArgumentException("Ints cannot be divded by zero");
-        return a / b;
-    }
-
-    public boolean isEven(int a) {
-        if (a % 2 == 0) {
-            return true;
+    public int divide(int x, int y) {
+        if (y == 0) {
+            throw new IllegalArgumentException("Ints cannot be divided by zero");
         }
-        return false;
+        return x / y;
+    }
+
+    public boolean isEven(int value) {
+        return value % 2 == 0;
     }
 
     public int[] incrementArrays(int[] values) {
